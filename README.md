@@ -34,6 +34,13 @@ Authored by: Biraj Zalavadia
 Taken by: Alissa Pepino
 Taken on: January 16, 2025
 
+# used to change the color of the selected content's background from java file instead of xml and how to refer to colors in the resource folder
+Taken from: https://stackoverflow.com/questions/30096772/using-colors-from-color-xml-in-java-code
+Authored by: Malwinder Singh
+Taken by: Alissa Pepino
+Taken on: January 16, 2025
+
+
 
 
 
