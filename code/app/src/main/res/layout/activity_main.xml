@@ -5,12 +5,74 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_color"
+
     tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/input_text_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:autofillHints="city"
+        android:ems="10"
+        android:hint="@string/input_line_prompt"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:singleLine="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/confirm_button"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/confirm_button"
+        tools:text="enter city"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/confirm_add_city"
+        android:textSize="21sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_city_button"
+        app:layout_constraintTop_toBottomOf="@+id/city_list"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/delete_city_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/delete_city_text"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_city_button"
+        app:layout_constraintTop_toBottomOf="@id/city_list"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/add_city_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/add_city_text"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete_city_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_list"
+        tools:visibility="visible" />
 
     <ListView
         android:id="@+id/city_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_city_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
